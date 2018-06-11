@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/receta_id"
+            android:icon="@drawable/icono_folder_black_24dp"
+            android:title="@string/receta" />
+        <item
+            android:id="@+id/about_us_id"
+            android:icon="@drawable/icono_info_black_24dp"
+            android:title="@string/about_us" />
+
+    </group>
+</menu>
