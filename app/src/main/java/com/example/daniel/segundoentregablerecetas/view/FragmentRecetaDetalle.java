@@ -47,7 +47,7 @@ public class FragmentRecetaDetalle extends Fragment {
         imageViewReceta.setImageResource(receta.getFoto());
         textViewTitulo.setText(receta.getTitulo());
         textViewIngredientes.setText("Ingredientes:\n\n" + receta.getIngredientes());
-        textViewPreparacion.setText("Preparación:\n" + receta.getPreparacion());
+        textViewPreparacion.setText("Preparación:\n\n" + receta.getPreparacion());
 
         return view;
     }

@@ -19,6 +19,14 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
+    <EditText
+        android:id="@+id/buscador_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/colorAccent"
+        android:hint="Buscar"
+        android:padding="8dp"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_id"

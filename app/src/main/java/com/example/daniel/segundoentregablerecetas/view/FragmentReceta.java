@@ -6,9 +6,12 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 
 import com.example.daniel.segundoentregablerecetas.R;
 import com.example.daniel.segundoentregablerecetas.controller.ControllerReceta;
@@ -27,6 +30,7 @@ public class FragmentReceta extends Fragment implements AdapterReceta.Notificado
     private RecyclerView recyclerViewReceta;
     private AdapterReceta adapterReceta;
     private NotificarReceta notificarReceta;
+    private EditText buscador;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,6 +38,24 @@ public class FragmentReceta extends Fragment implements AdapterReceta.Notificado
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_receta, container, false);
         recyclerViewReceta = view.findViewById(R.id.recycler_id);
+        buscador = view.findViewById(R.id.buscador_id);
+
+        buscador.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filter(s.toString());
+            }
+        });
 
         ControllerReceta controllerReceta = new ControllerReceta();
         listaRecetas = controllerReceta.getListaRecetas(getActivity());
@@ -44,6 +66,16 @@ public class FragmentReceta extends Fragment implements AdapterReceta.Notificado
         recyclerViewReceta.setAdapter(adapterReceta);
 
         return view;
+    }
+
+    private void filter(String texto) {
+        ArrayList<Receta> listaAFiltrar = new ArrayList<>();
+        for (Receta receta : listaRecetas) {
+            if (receta.getTitulo().toLowerCase().contains(texto.toLowerCase())) {
+                listaAFiltrar.add(receta);
+            }
+        }
+        adapterReceta.listaFiltro(listaAFiltrar);
     }
 
     @Override

@@ -49,6 +49,11 @@ public class AdapterReceta extends RecyclerView.Adapter {
         }
     }
 
+    public void listaFiltro(List<Receta> listaFiltrada) {
+        listaRecetas = listaFiltrada;
+        notifyDataSetChanged();
+    }
+
     public class ViewHolderReceta extends RecyclerView.ViewHolder {
 
         private TextView textViewTitulo;
@@ -64,11 +69,12 @@ public class AdapterReceta extends RecyclerView.Adapter {
                 public void onClick(View v) {
                     int posicionRecetaClickeada = getAdapterPosition();
                     Receta receta = listaRecetas.get(posicionRecetaClickeada);
-                    notificadorRecetaCelda.notificarRecetaClickeada(receta,posicionRecetaClickeada);
+                    notificadorRecetaCelda.notificarRecetaClickeada(receta, posicionRecetaClickeada);
                 }
             });
 
         }
+
 
         public void cargarReceta(Receta receta) {
             textViewTitulo.setText(receta.getTitulo());
