@@ -34,7 +34,14 @@ public class ActivityDetalle extends AppCompatActivity {
         crearListaDeFragment();
         AdapterViewPager adapterViewPager = new AdapterViewPager(getSupportFragmentManager(), fragmentRecetaDetalles);
         viewPager.setAdapter(adapterViewPager);
-        int posicionDelItem = bundle.getInt(POSICION_KEY);
+        int posicionDelItem = 0;
+
+        for (Integer i = 0; i < controllerReceta.getListaRecetas(this).size(); i++){
+            if (controllerReceta.getListaRecetas(this).get(i).equals(receta)){
+                posicionDelItem = i;
+                break;
+            }
+        }
         viewPager.setCurrentItem(posicionDelItem);
     }
 

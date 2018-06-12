@@ -1,6 +1,7 @@
 package com.example.daniel.segundoentregablerecetas.model.POJO;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Receta implements Serializable {
 
@@ -31,4 +32,13 @@ public class Receta implements Serializable {
     public String getPreparacion() {
         return preparacion;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Receta receta = (Receta) o;
+        return this.titulo.equals(receta.titulo) && this.preparacion.equals(receta.preparacion);
+    }
+
 }
