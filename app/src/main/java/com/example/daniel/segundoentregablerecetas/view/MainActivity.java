@@ -1,4 +1,4 @@
-package com.example.daniel.segundoentregablerecetas;
+package com.example.daniel.segundoentregablerecetas.view;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -10,6 +10,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import com.example.daniel.segundoentregablerecetas.R;
+import com.example.daniel.segundoentregablerecetas.model.POJO.Receta;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, FragmentReceta.NotificarReceta {
 
@@ -52,11 +55,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void notificar(Receta receta, int posicion) {
+        Intent intent = new Intent(this, ActivityDetalle.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable(FragmentRecetaDetalle.RECETA_KEY, receta);
-        FragmentRecetaDetalle fragmentRecetaDetalle = new FragmentRecetaDetalle();
-        fragmentRecetaDetalle.setArguments(bundle);
-        cargarFragment(fragmentRecetaDetalle);
+        bundle.putSerializable(ActivityDetalle.RECETA_KEY, receta);
+        bundle.putInt(ActivityDetalle.POSICION_KEY, posicion);
+        intent.putExtras(bundle);
+        startActivity(intent);
 
     }
 }

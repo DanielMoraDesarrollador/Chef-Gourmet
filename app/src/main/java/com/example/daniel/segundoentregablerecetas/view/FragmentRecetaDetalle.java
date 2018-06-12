@@ -1,4 +1,4 @@
-package com.example.daniel.segundoentregablerecetas;
+package com.example.daniel.segundoentregablerecetas.view;
 
 
 import android.os.Bundle;
@@ -9,19 +9,28 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.daniel.segundoentregablerecetas.R;
+import com.example.daniel.segundoentregablerecetas.model.POJO.Receta;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class FragmentRecetaDetalle extends Fragment {
-
-
     public static final String RECETA_KEY = "receta_recibida";
     private ImageView imageViewReceta;
     private TextView textViewTitulo;
     private TextView textViewIngredientes;
     private TextView textViewPreparacion;
 
+
+    public static FragmentRecetaDetalle dameUnFragment(Receta receta) {
+        FragmentRecetaDetalle fragmentRecetaDetalleCreado = new FragmentRecetaDetalle();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(RECETA_KEY, receta);
+        fragmentRecetaDetalleCreado.setArguments(bundle);
+        return fragmentRecetaDetalleCreado;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

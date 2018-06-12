@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/mainrecetario"
     android:orientation="vertical"
-    tools:context=".FragmentRecetaDetalle">
+    tools:context=".view.FragmentRecetaDetalle">
 
 
     <LinearLayout

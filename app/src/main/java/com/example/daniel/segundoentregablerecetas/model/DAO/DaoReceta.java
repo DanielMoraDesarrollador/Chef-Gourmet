@@ -1,50 +1,20 @@
-package com.example.daniel.segundoentregablerecetas;
-
+package com.example.daniel.segundoentregablerecetas.model.DAO;
 
 import android.content.Context;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+
+import com.example.daniel.segundoentregablerecetas.R;
+import com.example.daniel.segundoentregablerecetas.model.POJO.Receta;
 
 import java.util.ArrayList;
 import java.util.List;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
-public class FragmentReceta extends Fragment implements AdapterReceta.NotificadorRecetaCelda {
+public class DaoReceta {
 
     private List<Receta> listaRecetas;
-    private RecyclerView recyclerViewReceta;
-    private AdapterReceta adapterReceta;
-    private NotificarReceta notificarReceta;
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_receta, container, false);
-        recyclerViewReceta = view.findViewById(R.id.recycler_id);
-
+    public List<Receta> obtenerRecetas(Context context) {
         armarListaRecetas();
-
-        adapterReceta = new AdapterReceta(listaRecetas, this);
-        recyclerViewReceta.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
-        recyclerViewReceta.setHasFixedSize(true);
-        recyclerViewReceta.setAdapter(adapterReceta);
-
-        return view;
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        notificarReceta = (NotificarReceta) context;
+        return listaRecetas;
     }
 
     private void armarListaRecetas() {
@@ -110,15 +80,5 @@ public class FragmentReceta extends Fragment implements AdapterReceta.Notificado
                 "Colocar en un sartén a fuego mediano/fuerte los jugos de la cocción de los bifes que había reservado anteriormente: . Agregar el caldo de carne y el vino tinto. Dejar hervir por 10 a 15 minutos. Pasar por un colador y servir con el bife. Delicioso."));
     }
 
-
-    @Override
-    public void notificarRecetaClickeada(Receta receta, int posicion) {
-        notificarReceta.notificar(receta, posicion);
-    }
-
-
-    public interface NotificarReceta {
-        public void notificar(Receta receta, int posicion);
-    }
-
 }
+

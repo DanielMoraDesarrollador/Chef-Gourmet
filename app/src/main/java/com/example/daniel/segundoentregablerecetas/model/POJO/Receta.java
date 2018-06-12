@@ -1,4 +1,4 @@
-package com.example.daniel.segundoentregablerecetas;
+package com.example.daniel.segundoentregablerecetas.model.POJO;
 
 import java.io.Serializable;
 
