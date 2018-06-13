@@ -78,6 +78,61 @@ public class DaoReceta {
                 "Colocar el bife en una placa para horno con papel manteca. Hacer unos pequeños cortes en la masa de hojaldre en forma diagonal y pintar con la yema de huevo batida.\n" +
                 "Cocinar en el horno precalentado por 10 minutos, y luego bajar el horno a 200 C (Moderado/Fuerte) por 10 a 15 minutos más, o hasta que la masa esté bien dorada.\n" +
                 "Colocar en un sartén a fuego mediano/fuerte los jugos de la cocción de los bifes que había reservado anteriormente: . Agregar el caldo de carne y el vino tinto. Dejar hervir por 10 a 15 minutos. Pasar por un colador y servir con el bife. Delicioso."));
+        listaRecetas.add(new Receta("Fondue de Queso", R.drawable.im1, "250cc de vino blanco seco\n" +
+                "250g (2 tazas) de queso suizo rallado\n" +
+                "250g (2 tazas) de queso gruyere rallado\n" +
+                "2 cucharadas de harina\n" +
+                "¼ de cucharadita de sal\n" +
+                "¼ cucharadita de nuez moscada\n" +
+                "1 baguette cortada en cubos de 2 cm", "Preparación: 10mins  ›  Tiempo de cocción: 20mins  ›  Tiempo extra: 2mins enfriando  ›  Listo en:32mins \n" +
+                "Calentar el vino en una olla de fondue o caquelon a fuego suave. Cuando comienza a hacer burbujitas en los costados, añadir el queso suizo y el queso gruyere de a 1 taza a la vez. Dejar derretir sin parar de revolver con cuchara de madera.\n" +
+                "Una vez que todo el queso está derretido, agregar la harina disuelta en un poquito de agua, y mezclar para integrar bien. Condimentar con sal y nuez moscada. Servir con cubos de pan."));
+        listaRecetas.add(new Receta("Pato relleno con Castañas", R.drawable.im2, "Porciones: 4 \n" +
+                "Para la marinada\n" +
+                "1 zanahoria, pelada y picada\n" +
+                "1 puñado de perejil, picado\n" +
+                "1 cebolla, picada\n" +
+                "500cc de vino blanco\n" +
+                "1 ramita de romero\n" +
+                "2 hojas de laurel\n" +
+                "1 cucharadita de granos de pimienta blanca\n" +
+                "1 pato, limpio\n" +
+                "Para el relleno\n" +
+                "250g de castañas, tostadas y picadas finamente\n" +
+                "2 rodajas de pan, tostado y en cubitos\n" +
+                "1 manzana, cortada en cubos\n" +
+                "1 huevo\n" +
+                "1 cucharadita de estragón seco\n" +
+                "sal y pimienta, a gusto\n" +
+                "escarbadientes\n" +
+                "2 cucharadas de aceite de uva", "Preparación: 20mins  ›  Tiempo de cocción: 1hora50mins  ›  Listo en:2horas10mins \n" +
+                "Preparar la marinada mezclando todos los ingredientes juntos. Colocar el pato en un bowl grande y bañar con la marinada. Cubrir con film transparente y llevar a la heladera 12 horas.\n" +
+                "Precalentar el horno a 220 *C (bien caliente). Separar una fuente para horno.\n" +
+                "Para el relleno: Mezclar las castañas, las tostadas, las manzanas, el huevo y condimentar con sal, pimienta y estragón. Retirar el pato del bowl y colar la marinada reservando el líquido. Secar el pato con toallas de papel por dentro y por afuera. Condimentar con sal y pimienta, rellenar y cerrar la abertura con escarbadientes. Colocarlo sobre una fuente y llevar al horno 20 minutos hasta que esté dorado.\n" +
+                "En una cacerola, calentar la marinada y usar para rociar el pato. Cubrirlo con papel de aluminio y bajar la temperatura del horno a 180 *C (moderado). Cocinar el pato 90 minutos. Destapar y dejar dorar otros 10 minutos a horno fuerte (200 *C ) para que la piel se ponga crocante. Retirar del horno, cubrir con papel aluminio nuevamente y dejar reposar 7 minutos.\n" +
+                "Colar los jugos de cocción de la asadera y colocarlos en una cacerola pequeña. Condimentar con sal y pimienta. Cocinar al fuego hasta reducir y lograr una salsa. Servir la salsa con el pato."));
+        listaRecetas.add(new Receta("Milhojas de Mousse de Salmon", R.drawable.im3, "Rinde: 4 \n" +
+                "150 g de queso de cabra\n" +
+                "1 puñado de ciboulette picada\n" +
+                "1 paquete de galletitas de agua tipo obleas saladas para copetín\n" +
+                "sal y pimienta a gusto\n" +
+                "4 lonjas de salmón ahumado", "Preparación: 5mins  ›  Listo en:5mins \n" +
+                "Picar y mezclar 3 lonjas de salmón ahumado con el queso de cabra a temperatura ambiente hasta que se hayan mezclado bien. Si tiene una procesadora, mejor todavía. Salpimentar a gusto.\n" +
+                "Añadir la ciboulette picada y mezclar con un tenedor. Colocar la mousse intercalándola con las galletitas y decorar por arriba con la última tirita de salmón ahumado y ciboulette. Lista para servir."));
+        listaRecetas.add(new Receta("Brochette de Mar", R.drawable.im4, "Porciones: 2 \n" +
+                "1/2 Pimiento morrón amarillo\n" +
+                "1/2 Pimiento morrón verde\n" +
+                "1/2 Pimiento morrón rojo\n" +
+                "4 Palillos de Brochette\n" +
+                "1 Lata Calamares enlatados\n" +
+                "1 Lata Mejillones enlatados\n" +
+                "1 Cebolla\n" +
+                "A gusto Sal y Pimienta", "Preparación: 3mins  ›  Tiempo de cocción: 4mins  ›  Listo en:7mins \n" +
+                "Cortar la cebolla y todos los pimientos morrones en cuadrados de 2 centímetros aproximadamente.\n" +
+                "Armar los brochettes intercalando los ingredientes (los langostinos doblarlos a la mitad para pincharlos) e ir acomodándolos en las 4 cavidades de la base del accesorio BroCheff.\n" +
+                "Cortar el excedente del palillo, tapar hasta donde nos permita el espacio. Cocinar a potencia máxima durante unos 4 minutos.\n" +
+                "Consejo\n" +
+                "Degustar de a dos."));
     }
 
 }
